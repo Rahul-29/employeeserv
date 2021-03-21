@@ -49,4 +49,16 @@ public class RequestValidator implements Validator<Employee> {
             errorCodeList.add(ErrorCode.ZIP_CODE_REQUIRED);
         }
     }
+
+    public void validateId(String id){
+        try{
+            int employeeId = Integer.parseInt(id);
+            if(employeeId <= 0){
+                throw new EmployeeServException(ErrorCode.BAD_REQUEST);
+            }
+        }
+        catch (Exception e){
+            throw new EmployeeServException(ErrorCode.BAD_REQUEST);
+        }
+    }
 }

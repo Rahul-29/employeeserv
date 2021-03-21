@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 
 public enum ErrorCode {
     BAD_REQUEST(HttpStatus.BAD_REQUEST.getReasonPhrase(), HttpStatus.BAD_REQUEST),
-    FORBIDDEN(HttpStatus.FORBIDDEN.getReasonPhrase(), HttpStatus.FORBIDDEN),
+    FORBIDDEN("The employee record already exists", HttpStatus.FORBIDDEN),
     FIRST_NAME_REQUIRED("First Name is required", HttpStatus.BAD_REQUEST),
     LAST_NAME_REQUIRED("Last Name is required", HttpStatus.BAD_REQUEST),
     ADDRESS_LINE1_REQUIRED("Address Line1 is required", HttpStatus.BAD_REQUEST),

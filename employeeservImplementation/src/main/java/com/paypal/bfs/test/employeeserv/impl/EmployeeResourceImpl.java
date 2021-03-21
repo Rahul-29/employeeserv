@@ -23,6 +23,7 @@ public class EmployeeResourceImpl implements EmployeeResource {
 
     @Override
     public ResponseEntity<Employee> employeeGetById(String id) {
+        requestValidator.validateId(id);
         Employee employee = employeeService.fetchEmployeeDetails(id);
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
