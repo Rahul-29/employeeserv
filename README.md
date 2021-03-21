@@ -17,7 +17,8 @@ There are three modules in this application
 - Please have Maven version `3.3.3` & Java 8 on your system.
 - Use command `mvn clean install` to build the project.
 - Use command `mvn spring-boot:run` from `employeeservImplementation` folder to run the project.
-- Use postman or curl to access `http://localhost:8080/v1/bfs/employees/1` GET endpoint. It will return an Employee resource.
+- Use postman or curl to access `http://localhost:8021/v1/bfs/employees/{id}` GET endpoint. It will return an Employee resource.
+- POST endpoint `http://localhost:8021/v1/bfs/employee` for creating new employee
 
 ## Assignment
 We would like you to enhance the existing project and see you complete the following requirements:
